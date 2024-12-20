@@ -1,0 +1,10 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NOOBHUBX/Game/refs/heads/main/Loading"))()
+for PlaceID, Execute in pairs(Games) do
+    if PlaceID == game.PlaceId then
+        loadstring(game:HttpGet(Execute))()
+else
+        game.Players.LocalPlayer:Kick("Scriup Not Support This Game!!")
+        wait(1)
+	    game:GetService("TeleportService"):Teleport(game.Pl, game:GetService("Players").LocalPlayer)
+    end
+end
